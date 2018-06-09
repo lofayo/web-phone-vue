@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <headerComponent />
+  <div id="app" :style='{overflow: isRoll,height: height}'>
+    <headerComponent @noRoll='noRoll' @canRoll='canRoll' />
     <router-view/>
     <footerComponent />
   </div>
@@ -11,9 +11,25 @@
 
   export default {
     name: 'App',
+    data() {
+      return {
+        isRoll: 'auto',
+        height: 'auto'  
+      }
+    },
     components: {
       headerComponent,
       footerComponent
+    },
+    methods: {
+      noRoll() {
+        this.isRoll = 'hidden'
+        this.height = '100vh'
+      },
+      canRoll() {
+        this.isRoll = 'auto'
+        this.height = 'auto'
+      }
     }
   }
 
@@ -22,5 +38,4 @@
   #app {
     font-family: "Microsoft YaHei";
   }
-
 </style>

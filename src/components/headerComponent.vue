@@ -2,13 +2,13 @@
   <header class="header">
     <div class="header_init">
       <span class="logo"></span>
-      <span class="menu"></span>
+      <span class="menu" @click='showMenu'></span>
     </div>
-    <div class="menu_box">
+    <div v-if='isShowMenu' class="menu_box">
       <div class="menu_content">
         <div class="menu_item">
           <p class='item_title close_item'>
-            <span class="close"></span>
+            <span class="close" @click='closeMenu'></span>
           </p>
         </div>
         <div class="menu_item">
@@ -17,12 +17,12 @@
           </p>
         </div>
         <div class="menu_item">
-          <p class='item_title' @click='show_hide_list'>
+          <p class='item_title' @click='switchList_1'>
             <span>产品与服务</span>
-            <span v-if='isShow' class="up_arrow"></span>
+            <span v-if='isShow_1' class="up_arrow"></span>
             <span v-else class="down_arrow"></span>
           </p>
-          <ul v-if='isShow' class="item_list">
+          <ul v-if='isShow_1' class="item_list">
             <li>All-in-One 解决方案</li>
             <li>基于云处理的解决方案</li>
             <li>聚合支付</li>
@@ -31,11 +31,12 @@
           </ul>
         </div>
         <div class="menu_item">
-          <p class='item_title'>
+          <p class='item_title' @click='switchList_2'>
             <span>硬件</span>
-            <span class="arrow"></span>
+            <span v-if='isShow_2' class="up_arrow"></span>
+            <span v-else class="down_arrow"></span>
           </p>
-          <ul class="item_list">
+          <ul v-if='isShow_2' class="item_list hardware">
             <li>手持移动智能 POS</li>
             <li>台式收银一体机</li>
             <li>台式收银一体机</li>
@@ -52,11 +53,12 @@
           </p>
         </div>
         <div class="menu_item">
-          <p class='item_title'>
+          <p class='item_title' @click='switchList_3'>
             <span>关于</span>
-            <span class="arrow"></span>
+            <span v-if='isShow_3' class="up_arrow"></span>
+            <span v-else class="down_arrow"></span>
           </p>
-          <ul class="item_list">
+          <ul v-if='isShow_3' class="item_list">
             <li>公司介绍</li>
             <li>合作伙伴</li>
             <li>新闻报道</li>
@@ -70,7 +72,7 @@
           </p>
         </div>
         <div class="menu_item">
-          <p class='item_title'>
+          <p class='contact_us'>
             联系我们
           </p>
         </div>
@@ -79,15 +81,33 @@
   </header>
 </template>
 <script>
+
   export default {
     data() {
       return {
-        isShow: false
+        isShow_1: false,
+        isShow_2: false,
+        isShow_3: false,
+        isShowMenu: false
       }
     },
     methods: {
-      show_hide_list() {
-        this.isShow = !this.isShow
+      switchList_1() {
+        this.isShow_1 = !this.isShow_1
+      },
+      switchList_2() {
+        this.isShow_2 = !this.isShow_2
+      },
+      switchList_3() {
+        this.isShow_3 = !this.isShow_3
+      },
+      showMenu() {
+        this.isShowMenu = true
+        this.$emit('noRoll')
+      },
+      closeMenu() {
+        this.isShowMenu = false
+        this.$emit('canRoll')
       }
     }
 
@@ -96,6 +116,9 @@
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
+  
+  @import '../../static/css/mixin.styl'
+
   .header
     position: relative
     .header_init
@@ -103,28 +126,17 @@
       display: flex
       justify-content: space-between
       align-items: center
+      border_bottom1px()
       .logo
         display:inline-block
         width: 1.173333rem
         height: 0.64rem
-        background: url('~images/img_Navigation_LOGO.png') no-repeat center / 100% 100%
-        @media (-webkit-min-device-pixel-ratio: 2) {
-          background-image:url('~images/img_Navigation_LOGO@2x.png');
-        }
-        @media (-webkit-min-device-pixel-ratio: 3) {
-          background-image:url('~images/img_Navigation_LOGO@3x.png');
-        }
+        bg_dpr('~images/img_Navigation_LOGO')
       .menu
         display: inline-block
         width: 0.426667rem
         height: 0.373333rem
-        background: url('~images/icon_navigation_more.png') no-repeat center / 100% 100%
-        @media (-webkit-min-device-pixel-ratio: 2) {
-          background-image:url('~images/icon_navigation_more@2x.png');
-        }
-        @media (-webkit-min-device-pixel-ratio: 3) {
-          background-image:url('~images/icon_navigation_more@3x.png');
-        }
+        bg_dpr('~images/icon_navigation_more')
     .menu_box
       &::before
         content: ''
@@ -160,41 +172,40 @@
               display: inline-block
               width: 0.266667rem
               height: 0.16rem
-              background: url('~images/icon_Navigation_Open.png') no-repeat center / 100% 100%
-              @media (-webkit-min-device-pixel-ratio: 2) {
-                background-image:url('~images/icon_Navigation_Open@2x.png');
-              }
-              @media (-webkit-min-device-pixel-ratio: 3) {
-                background-image:url('~images/icon_Navigation_Open@3x.png');
-              }
+              bg_dpr('~images/icon_Navigation_Open')
             .up_arrow
               display: inline-block
               width: 0.266667rem
               height: 0.16rem
-              background: url('~images/icon_Navigation_shrink.png') no-repeat center / 100% 100%
-              @media (-webkit-min-device-pixel-ratio: 2) {
-                background-image:url('~images/icon_Navigation_shrink@2x.png');
-              }
-              @media (-webkit-min-device-pixel-ratio: 3) {
-                background-image:url('~images/icon_Navigation_shrink@3x.png');
-              } 
-              
+              bg_dpr('~images/icon_Navigation_shrink')
           .close_item
             justify-content: flex-end
             .close
               display: inline-block
               width: 0.48rem
               height: 0.48rem
-              background: url('~images/icon_navigation_close.png') no-repeat center / 100% 100%
-              @media (-webkit-min-device-pixel-ratio: 2) {
-                background-image:url('~images/icon_navigation_close@2x.png');
-              }
-              @media (-webkit-min-device-pixel-ratio: 3) {
-                background-image:url('~images/icon_navigation_close@3x.png');
-              }          
+              bg_dpr('~images/icon_navigation_close')
           .item_list
             color: #B3B3B3
             &>li
               padding: 0.533333rem 0.213333rem
               border-bottom: 1px solid #ECECEC
+          .hardware
+            &>li
+              padding-left: 1.12rem
+              &:nth-child(1)
+                background: url('~images/Group 3.png') no-repeat 0.32rem center / 0.426667rem 0.586667rem
+              &:nth-child(2)
+                background: url('~images/player-19.png') no-repeat 0.266667rem center / 0.533333rem 0.453333rem
+              &:nth-child(3)
+                background: url('~images/player-19 copy.png') no-repeat 0.266667rem center / 0.48rem 0.533333rem
+          .contact_us
+            width: 6.16rem
+            height: 1.066667rem
+            line-height: 1.066667rem
+            text-align: center
+            background: #4286F3
+            border-radius: 2.666667rem
+            color: #fff
+            margin-top: 1.093333rem
 </style>

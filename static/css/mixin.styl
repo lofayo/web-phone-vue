@@ -1,0 +1,20 @@
+border_bottom1px()
+  border-bottom: 0.026667rem solid #ECECEC
+
+bg_dpr(bg)
+  background: url(bg +'.png') no-repeat center / 100% 100%
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    background-image:url(bg +'@2x.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 3) {
+    background-image:url(bg +'@3x.png');
+  }
+  
+bg_dpr_jpg(bg)
+  background: url(bg +'.jpg') no-repeat center / 100% 100%
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    background-image:url(bg +'@2x.jpg');
+  }
+  @media (-webkit-min-device-pixel-ratio: 3) {
+    background-image:url(bg +'@3x.jpg');
+  }

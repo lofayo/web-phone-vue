@@ -28,7 +28,8 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       // 引入图片文件夹的别名，但是组件里引入图片时要注意前面加上~符号
-      'images': resolve('static/images')
+      'images': resolve('static/images'),
+      'static': resolve('static')
     }
   },
   module: {
