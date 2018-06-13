@@ -4,11 +4,10 @@
       <p>像APPLE收银</p>
       <p class="blue_line"></p>
       <p>最直观简约的零售方案-移动支付</p>
-      <p class="more">了解更多</p>
     </div>
     <section class="customer_item">
       <p class="item_banner_1"></p>
-      <p class="more">学到更多</p>
+      <router-link to='/article1'><p class="more">学到更多</p></router-link>
     </section>
   </div>
 </template>

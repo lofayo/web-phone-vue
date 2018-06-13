@@ -3,6 +3,7 @@ border_bottom1px()
 
 bg_dpr(bg)
   background: url(bg +'.png') no-repeat center / 100% 100%
+  background: url(bg +'.png') no-repeat center / contain
   @media (-webkit-min-device-pixel-ratio: 2) {
     background-image:url(bg +'@2x.png');
   }
@@ -17,4 +18,14 @@ bg_dpr_jpg(bg)
   }
   @media (-webkit-min-device-pixel-ratio: 3) {
     background-image:url(bg +'@3x.jpg');
+  }
+  
+  // 有时候需要设置背景图片的100%，但是有时候因为此设置会让图片变形，所以加入contain
+bg_dpr_contain(bg)
+  background: url(bg +'.png') no-repeat center / contain
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    background-image:url(bg +'@2x.png');
+  }
+  @media (-webkit-min-device-pixel-ratio: 3) {
+    background-image:url(bg +'@3x.png');
   }

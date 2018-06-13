@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style='{overflow: isRoll,height: height}'>
+  <div id="app" :class='{no_scroll: isScroll}'>
     <headerComponent @noRoll='noRoll' @canRoll='canRoll' />
     <router-view/>
     <footerComponent />
@@ -13,8 +13,7 @@
     name: 'App',
     data() {
       return {
-        isRoll: 'auto',
-        height: 'auto'  
+        isScroll: false
       }
     },
     components: {
@@ -23,18 +22,24 @@
     },
     methods: {
       noRoll() {
-        this.isRoll = 'hidden'
-        this.height = '100vh'
+        this.isScroll = true
       },
       canRoll() {
-        this.isRoll = 'auto'
-        this.height = 'auto'
+        this.isScroll = false
       }
-    }
+    },
+    mounted () {  
+      this.$showPDF('/pdf/ismp3%20中文.pdf')  
+    }  
   }
 
 </script>
 <style>
+  
+  .no_scroll {
+    height: 100vh;
+    overflow: hidden; 
+  }
   #app {
     font-family: "Microsoft YaHei";
   }

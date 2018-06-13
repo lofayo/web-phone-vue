@@ -2,6 +2,10 @@
 // .header_init
 //   border-bottom: 0.026667rem solid #ECECEC
 
+a
+  color: #333
+  text-decoration: none !important
+
 .border_bottom1px
   border-bottom: 0.026667rem solid #ECECEC
 
@@ -11,6 +15,11 @@
   height: 0.106667rem
   background: #4286F3
   border-radius: 100px
+.red_tip
+  padding: 0.053333rem 0.266667rem
+  background: #EB4537
+  border-radius: 0.08rem
+  color: #fff
 
 .gray_line
   display: inline-block
@@ -36,12 +45,16 @@
   color: #fff
   display: flex
   flex-direction: column
-  justify-content: space-around
+  justify-content: center
   align-items: center
+  &>p
+    margin-bottom: 0.533333rem
   &>p:nth-child(1)
     font-size: 0.853333rem
     line-height: 1.2rem
   &>p:nth-child(3)
     font-size: 0.373333rem
+  &>p:last-child
+    margin-bottom: 0
     
     

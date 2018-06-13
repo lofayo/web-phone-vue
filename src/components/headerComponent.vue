@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header_init">
-      <span class="logo"></span>
+      <router-link @click.native='closeMenu' to='/home'><span class="logo"></span></router-link>
       <span class="menu" @click='showMenu'></span>
     </div>
     <div v-if='isShowMenu' class="menu_box">
@@ -12,9 +12,11 @@
           </p>
         </div>
         <div class="menu_item">
-          <p class='item_title'>
-            <span>首页</span>
-          </p>
+          <router-link @click.native='closeMenu' to='/home'>
+            <p class='item_title'>
+              <span>首页</span>
+            </p>
+          </router-link>
         </div>
         <div class="menu_item">
           <p class='item_title' @click='switchList_1'>
@@ -23,11 +25,11 @@
             <span v-else class="down_arrow"></span>
           </p>
           <ul v-if='isShow_1' class="item_list">
-            <li>All-in-One 解决方案</li>
-            <li>基于云处理的解决方案</li>
-            <li>聚合支付</li>
-            <li>无缝接入</li>
-            <li>我们的服务</li>
+            <router-link @click.native='closeMenu' to='/allInOne'><li>All-in-One 解决方案</li></router-link>
+            <router-link @click.native='closeMenu' to='/solution'><li>基于云处理的解决方案</li></router-link>
+            <router-link @click.native='closeMenu' to='/pay'><li>聚合支付</li></router-link>
+            <router-link @click.native='closeMenu' to='/access'><li>无缝接入</li></router-link>
+            <router-link @click.native='closeMenu' to='/service'><li>我们的服务</li></router-link>
           </ul>
         </div>
         <div class="menu_item">
@@ -37,20 +39,24 @@
             <span v-else class="down_arrow"></span>
           </p>
           <ul v-if='isShow_2' class="item_list hardware">
-            <li>手持移动智能 POS</li>
-            <li>台式收银一体机</li>
-            <li>台式收银一体机</li>
+            <router-link @click.native='closeMenu' to='mobilePos'><li>手持移动智能 POS</li></router-link>
+            <router-link @click.native='closeMenu' to='deskCheck'><li>台式收银一体机</li></router-link>
+            <router-link @click.native='closeMenu' to='printer'><li>票据打印机</li></router-link>
           </ul>
         </div>
         <div class="menu_item">
-          <p class='item_title'>
+          <router-link @click.native='closeMenu' to='customer'>
+            <p class='item_title'>
             <span>典型客户</span>
           </p>
+        </router-link>
         </div>
         <div class="menu_item">
-          <p class='item_title'>
+          <router-link @click.native='closeMenu' to='resource'>
+            <p class='item_title'>
             <span>资源</span>
           </p>
+        </router-link>
         </div>
         <div class="menu_item">
           <p class='item_title' @click='switchList_3'>
@@ -59,10 +65,10 @@
             <span v-else class="down_arrow"></span>
           </p>
           <ul v-if='isShow_3' class="item_list">
-            <li>公司介绍</li>
-            <li>合作伙伴</li>
-            <li>新闻报道</li>
-            <li>加入我们</li>
+            <router-link @click.native='closeMenu' to='introduce'><li>公司介绍</li></router-link>
+            <router-link @click.native='closeMenu' to='partner'><li>合作伙伴</li></router-link>
+            <router-link @click.native='closeMenu' to='news'><li>新闻报道</li></router-link>
+            <router-link @click.native='closeMenu' to='joinUs'><li>加入我们</li></router-link>
           </ul>
         </div>
         <div class="menu_item">
@@ -72,9 +78,11 @@
           </p>
         </div>
         <div class="menu_item">
-          <p class='contact_us'>
+          <router-link @click.native='closeMenu' to='contactUs'>
+            <p class='contact_us'>
             联系我们
           </p>
+        </router-link>
         </div>
       </div>
     </div>
@@ -118,6 +126,8 @@
 <style lang="stylus" scoped>
   
   @import '../../static/css/mixin.styl'
+  
+
 
   .header
     position: relative
@@ -186,10 +196,11 @@
               height: 0.48rem
               bg_dpr('~images/icon_navigation_close')
           .item_list
-            color: #B3B3B3
-            &>li
-              padding: 0.533333rem 0.213333rem
-              border-bottom: 1px solid #ECECEC
+            &>a
+              &>li
+                color: #B3B3B3
+                padding: 0.533333rem 0.213333rem
+                border-bottom: 1px solid #ECECEC
           .hardware
             &>li
               padding-left: 1.12rem

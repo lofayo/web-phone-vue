@@ -6,6 +6,11 @@ import router from './router'
 
 import '../static/css/common.styl'
 
+// 引入pdf插件，并在vue中使用
+import pdf from '@/plugins/pdf'
+Vue.use(pdf)
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

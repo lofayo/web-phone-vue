@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/pdf': {
+        target: 'http://www.pospi.com', // 换成正确的服务器域名
+        changeOrigin: true,
+        pathRewrite: {
+          '^/pdf': '/pdf'
+        }
+      }
+    },
 
     // Various Dev Server settings
     // 这个地方，改成'0.0.0.0'有什么用，和localhost有啥区别？

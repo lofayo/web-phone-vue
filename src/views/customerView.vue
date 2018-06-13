@@ -14,7 +14,7 @@
         innisfree（悦诗风吟）是韩国化妆品品牌，也是由韩国第一化妆品集团AmorePacific爱茉莉太平洋集团潜心研制的自然主义化妆品，是高科技和自然的完美结合。上海--(美国商业信息)--在苹果零售店首次实施的无柜台化、移动化收银打造了全新的购物体验。这个完全颠覆了传统的创新收银模式,现在正式在Innisfree 门店得到实施运用，将客户体验提升到了前所未有的新高度。悦诗风吟作为爱茉莉太平洋旗下成长最快的品牌之一，Innisfree 延续了这种创新精神，在过去四年内持续呈几何级数增长，尤其是在中国市场， Innisfree 十分重视顾客满意度，Mobile POS的使用能够为零售店的每个顾客提供更加个性化、互动性更好的高标准服务。店员目前都配备了一台小巧的 Mobile POS ，不仅成功地消除了排队现象，而且店内人员可以随时随地回应处理客户的各类需求。”
         \u2028POSPi创始人邵雷敏表示：“ POSPi是专注于移动零售科技的创新型驱动公司，我们在技术上解决了大型跨国零售商如何在既存的IT业务系统下，无缝对接原有系统的问题，并成功将各种支付方案集成到一个平台上操作。随着innisfree的投入使用，验证了整个系统的安全性、可靠性和便利性。”
       </p>
-      <p class="more">解决方案</p>
+      <router-link to='/allInOne'><p class="more">解决方案</p></router-link>
     </section>
     <section class="customer_item">
       <p class="item_banner_2"></p>
@@ -25,7 +25,7 @@
         <br>
         <br>
         通过移动设备，M.A.C 店员可以登录手中的 Mobile POS         并立即访问顾客和产品信息，同时可以跟踪到顾客的购物偏好，然后使用这些数据来鼓励未来的潜在客户，增进品牌产品对顾客的持续吸引力。</p>
-      <p class="more">解决方案</p>
+      <router-link to='/allInOne'><p class="more">解决方案</p></router-link>
     </section>
     <section class="customer_item">
       <p class="item_banner_3"></p>
@@ -36,7 +36,7 @@
 
         POSPi 联合新生活集团共同打造了真正适用于直销模式的智能解决方案，建立个性化经销商平台和微信 CRM 系统以及 SCM数据分析引擎，实现了线下的个性化一对一导购式全渠道销售以及线上的软文营销和动态客户管理，帮助经销商提高了会员流入量、会员活跃度，强化运营部门的的管理体系。
       </p>
-      <p class="more">解决方案</p>
+      <router-link to='/allInOne'><p class="more">解决方案</p></router-link>
     </section>
     <section class="customer_item">
       <div class="item_banner_4"></div>

@@ -8,47 +8,57 @@
       <p>
         愛茉莉太平洋集團旗下品牌：悅詩風吟innisfree 攜手POSPi、中國銀行合作部署移動POS，打造卓越購物體驗。
       </p>
-      <p class="more">了解更多</p>
+      <router-link to='/article1'><p class="more">了解更多</p></router-link>
     </div>
     <section class="text">
       <p class="text_title">新闻报道</p>
       <p class="gray_line"></p>
       <ul>
-        <li class="news_item">
-          <div class="img img1"></div>
-          <div class='item_text'>
-            <span>一派（上海）数字科技　モバイルPOSシステムを本格提供　既存システムとの共存を強みに</span>
-            <span>2017.03.08</span>
-          </div>
-        </li>
-        <li class="news_item">
-          <div class="img img2"></div>
-          <div class='item_text'>
-            <span>Innisfree collaborates with POSPi and Bank of China to launch mobile payment in China</span>
-            <span>2017.01.18</span>
-          </div>
-        </li>
-        <li class="news_item">
-          <div class="img img3"></div>
-          <div class='item_text'>
-            <span>INNISFREE TEAMS UP WITH POSPI AND BANK OF CHINA TO LAUNCH MOBILE POS</span>
-            <span>2017.01.17</span>
-          </div>
-        </li>
-        <li class="news_item">
-          <div class="img img4"></div>
-          <div class='item_text'>
-            <span>愛茉莉太平洋集團旗下品牌：悅詩風吟innisfree 攜手POSPi、中國銀行合作部署移動POS，打造卓越...</span>
-            <span>2017.01.13</span>
-          </div>
-        </li>
-        <li class="news_item">
-          <div class="img img5"></div>
-          <div class='item_text'>
-            <span>大手化粧品メーカー アモーレパシフィックのコスメブランド イニスフリー POSPi及び中国銀行と提…</span>
-            <span>2017.01.13</span>
-          </div>
-        </li>
+        <a href="http://www.businesswire.com/news/home/20170112005352/zh-HK/">
+          <li class="news_item">
+            <div class="img img1"></div>
+            <div class='item_text'>
+              <span>一派（上海）数字科技　モバイルPOSシステムを本格提供　既存システムとの共存を強みに</span>
+              <span>2017.03.08</span>
+            </div>
+          </li>
+        </a>
+        <a href="https://www.cosmeticsdesign-asia.com/Article/2017/01/18/Innisfree-collaborates-with-POSPi-and-Bank-of-China-to-launch-mobile-payment-in-China">
+          <li class="news_item">
+            <div class="img img2"></div>
+            <div class='item_text'>
+              <span>Innisfree collaborates with POSPi and Bank of China to launch mobile payment in China</span>
+              <span>2017.01.18</span>
+            </div>
+          </li>
+        </a>
+        <a href="https://globalcosmeticsnews.com/innisfree-teams-up-with-pospi-and-bank-of-china-to-launch-mobile-pos/">
+          <li class="news_item">
+            <div class="img img3"></div>
+            <div class='item_text'>
+              <span>INNISFREE TEAMS UP WITH POSPI AND BANK OF CHINA TO LAUNCH MOBILE POS</span>
+              <span>2017.01.17</span>
+            </div>
+          </li>
+        </a>
+        <a href="http://www.businesswire.com/news/home/20170112005352/zh-HK/">
+          <li class="news_item">
+            <div class="img img4"></div>
+            <div class='item_text'>
+              <span>愛茉莉太平洋集團旗下品牌：悅詩風吟innisfree 攜手POSPi、中國銀行合作部署移動POS，打造卓越...</span>
+              <span>2017.01.13</span>
+            </div>
+          </li>
+        </a>
+        <a href="http://www.zaikei.co.jp/releases/436816/">
+          <li class="news_item">
+            <div class="img img5"></div>
+            <div class='item_text'>
+              <span>大手化粧品メーカー アモーレパシフィックのコスメブランド イニスフリー POSPi及び中国銀行と提…</span>
+              <span>2017.01.13</span>
+            </div>
+          </li>
+        </a>
       </ul>
     </section>
   </div>

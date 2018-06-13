@@ -4,7 +4,7 @@
       <p>像APPLE收银</p>
       <p class="blue_line"></p>
       <p>最直观简约的零售方案-移动支付</p>
-      <p class="more">了解更多</p>
+      <router-link to='likeApple'><p class="more">了解更多</p></router-link>
     </div>
     <section class="customer_item">
       <p>实体店的生存之道：
@@ -35,7 +35,7 @@
       <p>标杆客户</p>
       <p class="blue_line"></p>
       <p class="item_banner_3"></p>
-      <p class="more">了解更多</p>
+      <router-link to='customer'><p class="more">了解更多</p></router-link>
     </section>
     <section class="customer_item">
       <p>智能零售 All-in-One 解决方案</p>
@@ -44,7 +44,7 @@
         通过 POSPi 的 iPhone、iPod touch、iPad 的移动应用程序，可在店铺任意角落完成订单，使店员在销售过程中为顾客带来更加专业、贴心的服务。  
       </p>
       <p class="item_banner_4"></p>
-      <p class="more">了解更多</p>
+      <router-link to='allInOne'><p class="more">了解更多</p></router-link>
     </section>
     <section class="customer_item">
       <p>全渠道支付接口，一站式服务平台</p>
@@ -52,7 +52,7 @@
       <p>
         PassPi提供简单、安全、可靠的传统与移动互联网金融支付方式，包括APi、SDK、 传统POS、智能POS等各类支付终端集成解决方案。全面的支付解决方案和丰富的集成支付经验，让我们的客户在移动互联网时代赢得先机!
       </p>
-      <p class="more">了解更多</p>
+      <router-link to='pay'><p class="more">了解更多</p></router-link>
     </section>
     <section class="customer_item item_banner_5">
       <p>无缝接入</p>
@@ -60,7 +60,7 @@
       <p>
         传统国际一线品牌零售是基于PC 的解决方案，Mobile POS 可以低成本无缝接入其已有的ERP、CRM以及收银系统，提供简单高效易行的移动收银支付方案。
       </p>
-      <p class="more">了解更多</p>
+      <router-link to='access'><p class="more">了解更多</p></router-link>
     </section>
   </div>
 </template>

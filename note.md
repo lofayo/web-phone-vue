@@ -22,7 +22,12 @@
 	
 
 2、stylus用法
-
+	
+	//妈妈地，这个地方也是个坑，scoped看似非常好，防止其他样式污染当前组件样式，但是却有个问题：
+	//如果当前组件<template></template>没写的标签（比如通过组件导入方式产生的html），你给他添加样式是没用的
+	//因为样式被scoped给阻止了，只能保证当前有的HTML才能添加样式，保护过了头
+	//所以用法：如果是纯给当前组件的html添加样式，设置scoped保护，当然很好；如果是想给引入的组件元素添加样式，那就被保护了，设置不了，需要去掉
+	//任何一个东西，不可能平白无故的存在，它总会有着自己的用处，现在没用只是时候没到
 	<style lang="stylus" scoped>
 		.target_item
 			display:inline-block
@@ -92,6 +97,24 @@
 			
 			<style lang='stylus'>
 				@import 'mixin.styl'
-			
+				
+6、如果可以尽量把程序写简单咯，不要给自己找麻烦
+
+	比如：最好把函数绑定在该绑定的元素上
 	
+		（只是部分代码，但能够说明元素绑定事件的关系）
+		//1、第一个事件绑定在了父级元素
+	 <li class="job_item" @click='showJobDetails'>
+		//3、第一个事件应该绑定在黄色代码之上，这样就成功避免子元素的事件冒泡到父元素
+		<div class="job_text">
+		  <span>{{job.name}}</span>
+		  <span>{{job.shortAsk}}</span>
+		</div>
+		<div class="right_arrow"></div>
+		<div v-if='isShowJobDetails' class="job_details">
+		  <div style="text-align: right;">
+			//2、第二个事件绑定在子元素上，但是触发后会冒泡到父级事件上（但是可以通过阻止事件冒泡解决）
+			<span @click.stop='closeJobDatails' class="job_close"></span>
+		  </div>				
+		
 

@@ -3,11 +3,11 @@
     <div class="community">
       <p class="title">关注我们的社区</p>
       <p class="target">
-        <span class="target_item"></span>
-        <span class="target_item"></span>
-        <span class="target_item"></span>
-        <span class="target_item"></span>
-        <span class="target_item"></span>
+        <a target="_blank" href="" class="target_item"></a>
+        <a target="_blank" href="" class="target_item"></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCuZYolcwaJUvI-3wZJ0PAVw/featured" class="target_item"></a>
+        <a target="_blank" href="http://id.tudou.com/pospisolutions" class="target_item"></a>
+        <a target="_blank" href="" class="target_item"></a>
       </p>
     </div>
     <div class="copy_rights">
