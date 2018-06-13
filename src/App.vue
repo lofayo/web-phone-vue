@@ -27,20 +27,21 @@
       canRoll() {
         this.isScroll = false
       }
-    },
-    mounted () {  
-      this.$showPDF('/pdf/ismp3%20中文.pdf')  
-    }  
+    }
   }
 
 </script>
 <style>
-  
   .no_scroll {
     height: 100vh;
-    overflow: hidden; 
+    overflow: hidden;
   }
+
   #app {
     font-family: "Microsoft YaHei";
   }
+  #container{
+    display: none;
+  }
+
 </style>

@@ -8,7 +8,7 @@
       <p>
         愛茉莉太平洋集團旗下品牌：悅詩風吟innisfree 攜手POSPi、中國銀行合作部署移動POS，打造卓越購物體驗。
       </p>
-      <router-link to='/article1'><p class="more">了解更多</p></router-link>
+      <router-link to='/article1'><p class="more" style="margin-left: 0.533333rem;">了解更多</p></router-link>
     </div>
     <section class="text">
       <p class="text_title">新闻报道</p>

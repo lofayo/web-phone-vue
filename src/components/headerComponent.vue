@@ -126,12 +126,17 @@
 <style lang="stylus" scoped>
   
   @import '../../static/css/mixin.styl'
-  
-
 
   .header
     position: relative
+    height: 1.44rem
     .header_init
+      background: #fff
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      box-sizing: border-box
       padding: 0.346667rem 0.533333rem
       display: flex
       justify-content: space-between
@@ -192,8 +197,8 @@
             justify-content: flex-end
             .close
               display: inline-block
-              width: 0.48rem
-              height: 0.48rem
+              width: 0.693333rem;
+              height: 0.693333rem
               bg_dpr('~images/icon_navigation_close')
           .item_list
             &>a

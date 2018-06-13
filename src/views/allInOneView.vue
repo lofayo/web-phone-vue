@@ -85,7 +85,7 @@
         </li>
       </ul>
     </section>
-    <router-link to='article1'><p class="more">了解更多</p></router-link>
+    <router-link to='/solution'><p class="more">了解更多</p></router-link>
   </div>
 </template>
 <script>

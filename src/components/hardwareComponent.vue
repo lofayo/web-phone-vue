@@ -9,7 +9,8 @@
     <ul class="des_lists">
       <li v-for='(list,index) of hardware.desLists' :key='index'>{{list}}</li>
     </ul>
-    <a target="_blank" :href="hardware.moreUrl"><p class="more test_more">了解更多</p></a>
+    <!-- <a target="_blank" :href="hardware.moreUrl"><p class="more test_more">了解更多</p></a> -->
+    <router-link :to='/previewPdf/+hardware.moreUrl'><p class="more test_more">了解更多</p></router-link>
   </div>
 </template>
 <script>

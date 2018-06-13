@@ -8,7 +8,7 @@
       <p>
         像APPLE收银 （最直观简约的零售方案-移动支付）
       </p>
-      <router-link to='article1'><p class="more">了解更多</p></router-link>
+      <router-link to='article1'><p class="more" style="margin-left: 0.533333rem;">了解更多</p></router-link>
     </div>
     <section class="text">
       <ul>

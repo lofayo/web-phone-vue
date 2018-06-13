@@ -23,6 +23,7 @@ import serviceView from '@/views/serviceView'
 import payView from '@/views/payView'
 import solutionView from '@/views/solutionView'
 import allInOneView from '@/views/allInOneView'
+import previewPdfView from '@/views/previewPdfView'
 
 
 import hardwareComponent from '@/components/hardwareComponent'
@@ -31,6 +32,9 @@ Vue.use(Router)
 
 export default new Router({
   routes: [{
+    path: '/',
+    redirect: '/home'
+  }, {
     path: '/home',
     component: homeView
   }, {
@@ -99,8 +103,11 @@ export default new Router({
   }, {
     path: '/allInOne',
     component: allInOneView
+  }, {
+    path: '/previewPdf/:id(.+)',
+    component: previewPdfView
   }],
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 }
   }
 })
