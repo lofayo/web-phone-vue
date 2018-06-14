@@ -2,6 +2,11 @@
 
 </template>
 <script>
+
+  import Vue from 'vue'
+  import pdf from '@/plugins/pdf'
+  Vue.use(pdf)
+
   export default {
     created () {
       let pdfUrl = this.$route.params.id
