@@ -74,7 +74,11 @@
         <div class="menu_item">
           <p class='item_title'>
             <span>切换语言</span>
-            <span class="arrow">简|EN</span>
+            <span style="display: flex;">
+              <span v-if='isEn'>EN</span>
+              <span v-else>简</span>
+              <switchComponent style='margin-left: 0.266667rem' />
+            </span>
           </p>
         </div>
         <div class="menu_item">
@@ -90,6 +94,8 @@
 </template>
 <script>
 
+  import switchComponent from '@/components/switchComponent'
+
   export default {
     data() {
       return {
@@ -97,6 +103,11 @@
         isShow_2: false,
         isShow_3: false,
         isShowMenu: false
+      }
+    },
+    computed: {
+      isEn() {
+        return this.$store.state.btnActive
       }
     },
     methods: {
@@ -117,6 +128,9 @@
         this.isShowMenu = false
         this.$emit('canRoll')
       }
+    },
+    components:{
+      switchComponent
     }
 
   }
@@ -141,6 +155,7 @@
       display: flex
       justify-content: space-between
       align-items: center
+      z-index: 2
       border_bottom1px()
       .logo
         display:inline-block
@@ -171,7 +186,7 @@
         background: #fff
         box-sizing: border-box
         padding: 0.853333rem
-        z-index: 1
+        z-index: 3
         .menu_item
           font-size: 0.426667rem
           line-height: 0.586667rem

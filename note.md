@@ -130,4 +130,48 @@
 
 	<router-link @click.native='closeMenu' to='/home'><span class="logo"></span></router-link>
 		  
+9、PDF文件的引入路径终于还是出问题了
 
+
+10、匹配其它任何路由，用星号表示
+
+	{
+		path: '*',
+		redirect: '/home'
+	}
+
+11、没事可以尝试封装插件的方法
+
+	import PDF from './PDF'
+
+	var $vm
+	export default {
+	  install (Vue, options) {
+		if (!$vm) {
+		  const PDFPlugin = Vue.extend(PDF)
+		  $vm = new PDFPlugin().$mount()
+		  document.body.appendChild($vm.$el)
+		}
+		Vue.prototype.$showPDF = function (url) {
+		  $vm.showPDF(url)
+		}
+	  }
+	}
+	
+	
+	
+	// 这个东西有点坑啊，全局引用，就整个项目引用了，还得在样式里控制一开始不显示，难道不能单文件引入吗？
+	// 最终上下实现方案：没有把你作为插件使用，而是直接用pdf.vue作为一个路由的内容
+	// import pdf from '@/plugins/pdf'
+	// Vue.use(pdf)
+
+12、vuex控制着整个项目的状态值，太有用了
+
+	理解用法：
+		1、安装vuex
+		2、定义好store
+		3、main.js中全局注册到整个vue实例项目上
+		4、在单独组件里的computed中引入全局状态值this.$store.state.count，以及methods中定义方法改变this.$store.state.count
+		
+	为了使用switch开关按钮，单独写个组件，还是不太划算，最好还是封装一个自己的UI库，先写好，再直接代码里引入class最高效
+		  

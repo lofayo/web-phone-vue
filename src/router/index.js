@@ -26,7 +26,7 @@ import allInOneView from '@/views/allInOneView'
 import previewPdfView from '@/views/previewPdfView'
 
 
-import hardwareComponent from '@/components/hardwareComponent'
+import switchComponent from '@/components/switchComponent'
 
 Vue.use(Router)
 
@@ -59,14 +59,14 @@ export default new Router({
     path: '/joinUs',
     component: joinUsView
   }, {
+    path: '/deskCheck',
+    component: deskCheckView
+  },{
     path: '/printer',
     component: printerView
   }, {
     path: '/mobilePos',
     component: mobilePosView
-  }, {
-    path: '/deskCheck',
-    component: deskCheckView
   }, {
     path: '/resource',
     component: resourceView
@@ -106,6 +106,9 @@ export default new Router({
   }, {
     path: '/previewPdf/:id(.+)',
     component: previewPdfView
+  }, {
+    path: '*',
+    redirect: '/home'
   }],
   scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 }

@@ -80,11 +80,16 @@
         this.pageNum++
           this.queueRenderPage(this.pageNum)
       }
+    },
+    created() {
+      let urlId = this.$route.params.id
+      console.log(urlId)
     }
   }
 
 </script>
 <style scoped>
+
   #container {
     background-color: #000;
     position: fixed;
@@ -96,6 +101,7 @@
     padding: 5px;
     box-sizing: border-box;
     overflow: auto;
+    z-index: 3;
   }
 
   #container::after {
