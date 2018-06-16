@@ -248,7 +248,7 @@
             display: flex
             justify-content: space-between
             align-items: center
-            color: #333333
+            color: #000
             font-weight: bold
             padding: 0.533333rem 0.213333rem
             border-bottom: 1px solid #ECECEC
