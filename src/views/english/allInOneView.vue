@@ -1,51 +1,56 @@
 <template>
   <div class="content">
     <div class="banner">
-      <p>智能零售 All-in-One 解决方案</p>
+      <p>
+        Smart Retail <br>
+        All-in-One Solution
+      </p>
       <p class="blue_line"></p>
-      <p>通过 POSPi 的 iPhone、iPod touch、iPad 的移动应用程序，可在店铺任意角落完成订单，使店员在销售过程中为顾客带来更加专业、贴心的服务。  </p>
+      <p>
+          Through POSPi's mobile applications for iPhone, iPod touch, and iPad, orders can be placed in any corner of the store, enabling shoppers to bring more professional and caring services to customers during the sales process.
+      </p>
     </div>
     <section class="many_item">
       <ul class="item_lists">
         <li>
           <p class="small_logo small_logo_1"></p>
-          <p>收银管理</p>
-          <p>扫码、快选收银</p>
-          <p>促销、打折</p>
-          <p>全渠道支付</p>
-          <p>现金管理</p>
-          <p>O2O线下核销</p>
-          <p>收银报表</p>
+          <p>Cash register management</p>
+          <p>Scan code、Quick cash register</p>
+          <p>Promotional discounts</p>
+          <p>Omni-channel payment</p>
+          <p>Cash Management</p>
+          <p>O2O offline write-off</p>
+          <p>Cash register report</p>
         </li>
         <li>
           <p class="small_logo small_logo_2"></p>
-          <p>会员管理</p>
-          <p>会员查询</p>
-          <p>会员注册</p>
-          <p>会员资料修改</p>
-          <p>积分换礼</p>
-          <p>电子券</p>
-          <p>储值卡</p>
+          <p>Member Management</p>
+          <p>Member inquiry</p>
+          <p>Registered member</p>
+          <p>Member information modification</p>
+          <p>Point exchange ceremony:</p>
+          <p>Electronic coupons</p>
+          <p>tored value card</p>
         </li>
         <li class="item_img_1"></li>
         <li>
           <p class="small_logo small_logo_3"></p>
-          <p>库存管理</p>
-          <p>商品查询</p>
-          <p>库存查询</p>
-          <p>订货补货管理</p>
-          <p>收货管理</p>
-          <p>盘点管理</p>
-          <p>礼品管理</p>
+          <p>Inventory Management</p>
+          <p>Product inquiry</p>
+          <p>Inventory inquiry</p>
+          <p>Order replenishment management</p>
+          <p>Receipt management</p>
+          <p>Inventory Management</p>
+          <p>Gift Management</p>
         </li>
         <li>
           <p class="small_logo small_logo_4"></p>
-          <p>店务管理</p>
-          <p>员工绩效</p>
-          <p>消息推送</p>
-          <p>远程培训、考试</p>
-          <p>支付管理</p>
-          <p>办公用品管理</p>
+          <p>Store Management</p>
+          <p>Staff performance</p>
+          <p>Message push</p>
+          <p>Remote training, examinations</p>
+          <p>Uniform management</p>
+          <p>Office supplies management</p>
         </li>
       </ul>
     </section>
@@ -54,38 +59,42 @@
       <ul class="item_lists">
         <li>
           <p class="small_logo small_logo_5"></p>
-          <p>令人难忘的体验</p>
-          <p>店员可以在店内任何地方与顾客会面并提供定制化购物体验。</p>
+          <p>Memorable Experience</p>
+          <p>
+              Meet customers anywhere in-store and provide customized shopping experience.
+          </p>
         </li>
         <li>
           <p class="small_logo small_logo_6"></p>
-          <p>更快的全面支付渠道</p>
-          <p>接受多种支付渠道，包括：微信支付、支付宝、银行卡以及信用卡，减少不必要的繁琐流程</p>
+          <p>Faster Omni-Payments</p>
+          <p>
+            Accept all kinds of payments, speed up transactions and quickly ring up sales.
+          </p>
         </li>
         
         <li>
           <p class="small_logo small_logo_7"></p>
-          <p>顾客的紧密联系</p>
-          <p>更直观的了解到顾客对产品的喜好以及顾客的忠诚度</p>
+          <p>Connect with Customer</p>
+          <p>Gather details about customers in one place and customize loyalty programs.</p>
         </li>
         <li>
           <p class="small_logo small_logo_8"></p>
-          <p>库存管理</p>
-          <p>自动更新，准确和便携的库存管理，做到真正的库存可视化。</p>
+          <p>Inventory made Easy</p>
+          <p>Automatic, accurate and portable inventory management at fingertips.</p>
         </li>
         <li>
           <p class="small_logo small_logo_9"></p>
-          <p>提高效率</p>
-          <p>管理雇员，监控生产链平台，对雇员提供远程培训教学。</p>
+          <p>Improve Productivity</p>
+          <p>Manage employees, monitor performance, provide remote training.</p>
         </li>
         <li>
           <p class="small_logo small_logo_10"></p>
-          <p>统揽全局</p>
-          <p>追踪并完成所有综合数据的实时查看。</p>
+          <p>Track Everything</p>
+          <p>Comprehensive data & insights summarized for easy understanding.</p>
         </li>
       </ul>
     </section>
-    <router-link to='/solution'><p class="more">了解更多</p></router-link>
+    <router-link to='/solutionEn'><p class="more">Learn More</p></router-link>
   </div>
 </template>
 <script>
@@ -97,7 +106,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='stylus' scoped>
 
-  @import '../../static/css/mixin.styl'
+  @import '../../../static/css/mixin.styl'
   .content
     text-align: center
     font-size: 0.373333rem
@@ -106,10 +115,8 @@
       bg_dpr_jpg('~images/icon_AllInOne_banner')
     .item_lists
       overflow: hidden
+      margin-bottom: 1.6rem
       &>li
-        float: left
-        width: 50vw
-        height: 10.0rem
         text-align: center
         font-size: 0.373333rem
         line-height: 0.533333rem
@@ -147,18 +154,17 @@
         .small_logo_10
           bg_dpr_contain('~images/icon_allinone_data')
       .item_img_1
-        position: relative
-        left: 50%
-        transform: translateX(-50%)
         width: 5.466667rem
         height: 11.013333rem
-        margin: 0 auto
+        margin: 1.6rem auto 0
         bg_dpr('~images/icon_AllInOne_img1')
     .other_item
       border-bottom: 0.026667rem solid #ececec
       .item_lists
-        
+        margin-bottom: 0
         &>li
+          float: left
+          width: 50vw
           height: 7.066667rem
           padding: 0 0.266667rem
           box-sizing: border-box
@@ -166,10 +172,13 @@
           border-left: 0.026667rem solid #EDEEF4
           margin-left: -0.026667rem
           &>p:nth-child(2)
+            font-size: 0.373333rem
             color: #333333
-            font-size: 0.48rem
           &>p:nth-child(3)
+            font-size: 0.373333rem
             color: #B3B3B3
+          .small_logo
+            margin: 1.013333rem auto 0.826667rem
     .more
       margin: 0.8rem auto 1.6rem
           

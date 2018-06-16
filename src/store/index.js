@@ -6,11 +6,11 @@ Vue.use(Vuex)
 // 现在整个store中定义所有的全局状态值，以及操作数据变化的方法
 export default new Vuex.Store({
   state: {
-    btnActive: false
+    isEn: false
   },
   mutations: {
     switchBtn (state) {
-      state.btnActive = !state.btnActive
+      state.isEn = !state.isEn
     }
   }
 })

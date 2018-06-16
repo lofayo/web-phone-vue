@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+import enRouter from './enRouter'
+
+
 import homeView from '@/views/homeView'
 import contactUsView from '@/views/contactUsView'
 import customerView from '@/views/customerView'
@@ -109,7 +113,9 @@ export default new Router({
   }, {
     path: '*',
     redirect: '/home'
-  }],
+  },
+    ...enRouter
+  ],
   scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 }
   }

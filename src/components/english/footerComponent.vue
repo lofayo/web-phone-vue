@@ -1,8 +1,7 @@
 <template>
   <footer class="header">
     <div class="community">
-      <p v-if='isEn' class="title">Focus on our community</p>
-      <p v-else class="title">关注我们的社区</p>
+      <p class="title">Focus on our community</p>
       <p class="target">
         <a target="_blank" href="" class="target_item"></a>
         <a target="_blank" href="" class="target_item"></a>
@@ -18,18 +17,14 @@
 </template>
 <script>
   export default {
-    computed: {
-      isEn() {
-        return this.$store.state.isEn
-      }
-    }
+
   }
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
 
-  @import '../../static/css/mixin.styl'
+  @import '../../../static/css/mixin.styl'
 
   .header
     font-size: 0.32rem

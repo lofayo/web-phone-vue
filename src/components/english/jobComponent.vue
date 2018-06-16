@@ -96,7 +96,6 @@
       background-color: #fff
       background-position: left bottom
       background-size: 100%
-      z-index: 4
       .job_close
         display: inline-block
         width: 0.693333rem

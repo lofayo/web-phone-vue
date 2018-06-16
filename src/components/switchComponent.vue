@@ -1,14 +1,14 @@
 <template>
    <!-- 发现，想写个UI库，其实也没有那么难，就是一些稍高级的CSS属性与简单的JS交互，没事也来写个 -->
-  <div class="switch_box" :class='{active:btnActive}' @click='switchBtn'>
+  <div class="switch_box" :class='{active:isEn}' @click='switchBtn'>
     <span class="circle"></span>
   </div>
 </template>
 <script>
   export default {
     computed: {
-      btnActive () {
-        return this.$store.state.btnActive
+      isEn () {
+        return this.$store.state.isEn
       }
     },
     methods: {

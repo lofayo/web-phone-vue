@@ -1,9 +1,7 @@
 <template>
   <header class="header">
     <div class="header_init">
-      <router-link v-if='isEn' @click.native='closeMenu' to='/homeEn'><span class="logo"></span></router-link>
-      <router-link v-else @click.native='closeMenu' to='/home'><span class="logo"></span></router-link>
-
+      <router-link @click.native='closeMenu' to='/home'><span class="logo"></span></router-link>
       <span class="menu" @click='showMenu'></span>
     </div>
     <div v-if='isShowMenu' class="menu_box">
@@ -14,133 +12,83 @@
           </p>
         </div>
         <div class="menu_item">
-          <router-link v-if='isEn' @click.native='closeMenu' to='/homeEn'>
+          <router-link @click.native='closeMenu' to='/home'>
             <p class='item_title'>
               <span>HOME</span>
-            </p>
-          </router-link>
-          <router-link v-else @click.native='closeMenu' to='/home'>
-            <p class='item_title'>
-              <span>首页</span>
             </p>
           </router-link>
         </div>
         <div class="menu_item">
           <p class='item_title' @click='switchList_1'>
-            <span v-if='isEn'>PRODUCTS & SERVICES</span>
-            <span v-else>产品与服务</span>
+            <span>PRODUCTS & SERVICES</span>
             <span v-if='isShow_1' class="up_arrow"></span>
             <span v-else class="down_arrow"></span>
           </p>
           <ul v-if='isShow_1' class="item_list">
-            <router-link v-if='isEn' @click.native='closeMenu' to='/allInOneEn'><li>All-in-One Solution</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/allInOne'><li>All-in-One 解决方案</li></router-link>
-
-            <router-link v-if='isEn' @click.native='closeMenu' to='/solutionEn'><li>Cloud-based Solution</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/solution'><li>基于云处理的解决方案</li></router-link>
-
-            <router-link v-if='isEn' @click.native='closeMenu' to='/payEn'><li>Aggregate Payment</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/pay'><li>聚合支付</li></router-link>
-
-            <router-link v-if='isEn' @click.native='closeMenu' to='/accessEn'><li>Seamless Access</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/access'><li>无缝接入</li></router-link>
-
-            <router-link v-if='isEn' @click.native='closeMenu' to='/serviceEn'><li>Our Services</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/service'><li>我们的服务</li></router-link>
-
+            <router-link @click.native='closeMenu' to='/allInOne'><li>All-in-One Solution</li></router-link>
+            <router-link @click.native='closeMenu' to='/solution'><li>Cloud-based Solution</li></router-link>
+            <router-link @click.native='closeMenu' to='/pay'><li>Aggregate Payment</li></router-link>
+            <router-link @click.native='closeMenu' to='/access'><li>Seamless Access</li></router-link>
+            <router-link @click.native='closeMenu' to='/service'><li>Our Services</li></router-link>
           </ul>
         </div>
         <div class="menu_item">
           <p class='item_title' @click='switchList_2'>
-            <span v-if='isEn'>HARDWARE</span>
-            <span v-else>硬件</span>
+            <span>HARDWARE</span>
             <span v-if='isShow_2' class="up_arrow"></span>
             <span v-else class="down_arrow"></span>
           </p>
           <ul v-if='isShow_2' class="item_list hardware">
-            <router-link v-if='isEn' @click.native='closeMenu' to='mobilePosEn'><li>Smart Mobile POS</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='mobilePos'><li>手持移动智能 POS</li></router-link>
-
-            <router-link v-if='isEn' @click.native='closeMenu' to='deskCheckEn'><li>Desktop Cash Machine</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='deskCheck'><li>台式收银一体机</li></router-link>
-
-            <router-link v-if='isEn' @click.native='closeMenu' to='printerEn'><li>Receipt Printer</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='printer'><li>票据打印机</li></router-link>
-
+            <router-link @click.native='closeMenu' to='mobilePos'><li>Smart Mobile POS</li></router-link>
+            <router-link @click.native='closeMenu' to='deskCheck'><li>Desktop Cash Machine</li></router-link>
+            <router-link @click.native='closeMenu' to='printer'><li>Receipt Printer</li></router-link>
           </ul>
         </div>
         <div class="menu_item">
-          <router-link v-if='isEn' @click.native='closeMenu' to='customerEn'>
+          <router-link @click.native='closeMenu' to='customer'>
             <p class='item_title'>
-              <span>CUSTOMERS</span>
-            </p>
-          </router-link>
-          <router-link v-else @click.native='closeMenu' to='customer'>
-            <p class='item_title'>
-              <span>典型客户</span>
-            </p>
+            <span>CUSTOMERS</span>
+          </p>
         </router-link>
         </div>
         <div class="menu_item">
-          <router-link v-if='isEn' @click.native='closeMenu' to='resourceEn'>
+          <router-link @click.native='closeMenu' to='resource'>
             <p class='item_title'>
-              <span>RESOURCES</span>
-            </p>
-          </router-link>
-          <router-link v-else @click.native='closeMenu' to='resource'>
-            <p class='item_title'>
-            <span>资源</span>
+            <span>RESOURCES</span>
           </p>
         </router-link>
         </div>
         <div class="menu_item">
           <p class='item_title' @click='switchList_3'>
-            <span v-if='isEn'>ABOUT</span>
-            <span v-else>关于</span>
+            <span>ABOUT</span>
             <span v-if='isShow_3' class="up_arrow"></span>
             <span v-else class="down_arrow"></span>
           </p>
           <ul v-if='isShow_3' class="item_list">
-            <router-link v-if='isEn' @click.native='closeMenu' to='/introduceEn'><li>COMPANY</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/introduce'><li>公司介绍</li></router-link>
-
-            <router-link v-if='isEn' @click.native='closeMenu' to='/partnerEn'><li>PARTNERS</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/partner'><li>合作伙伴</li></router-link>
-            
-            <router-link v-if='isEn' @click.native='closeMenu' to='/newsEn'><li>NEWSROOM</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/news'><li>新闻报道</li></router-link>
-            
-            <router-link v-if='isEn' @click.native='closeMenu' to='/joinUsEn'><li>JOIN US</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='/joinUs'><li>加入我们</li></router-link>
+            <router-link @click.native='closeMenu' to='introduce'><li>COMPANY</li></router-link>
+            <router-link @click.native='closeMenu' to='partner'><li>PARTNERS</li></router-link>
+            <router-link @click.native='closeMenu' to='news'><li>NEWSROOM</li></router-link>
+            <router-link @click.native='closeMenu' to='joinUs'><li>JOIN US</li></router-link>
           </ul>
         </div>
         <div class="menu_item">
           <p class='item_title'>
-            <span v-if='isEn'>LANGUAGE</span>
-            <span v-else>切换语言</span>
+            <span>LANGUAGE</span>
             <span style="display: flex;">
               <span v-if='isEn'>EN</span>
               <span v-else>简</span>
-              <router-link v-if='isEn' to='home' >
-                <switchComponent style='margin-left: 0.266667rem' />
-              </router-link>
-              <router-link v-else to='/homeEn' >
+              <router-link to='/homeEn' >
                 <switchComponent style='margin-left: 0.266667rem' />
               </router-link>
             </span>
           </p>
         </div>
         <div class="menu_item">
-          <router-link v-if='isEn' @click.native='closeMenu' to='contactUsEn'>
+          <router-link @click.native='closeMenu' to='contactUs'>
             <p class='contact_us'>
-              CONTACT US
-            </p>
-          </router-link>
-          <router-link v-else @click.native='closeMenu' to='contactUs'>
-            <p class='contact_us'>
-              联系我们
-            </p>
-          </router-link>
+            CONTACT US
+          </p>
+        </router-link>
         </div>
       </div>
     </div>
@@ -193,7 +141,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
   
-  @import '../../static/css/mixin.styl'
+  @import '../../../static/css/mixin.styl'
 
   .header
     position: relative
