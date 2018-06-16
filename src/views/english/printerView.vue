@@ -13,26 +13,26 @@
         hardwareData: [
           {
             title: 'TSP 654II',
-            desTitle: '通用多功能热敏票据打印机',
-            desLists: ["1.每秒150mm高速热敏打印，203 dpi 高分辨率、高密度垂直及水平打印", "2.出错率低，至少六千万行无故障", "3.标配高性能自动裁切头"],
+            desTitle: 'Universal Multi-Function Thermal Bill Printer',
+            desLists: ["1.High-speed thermal printing in 150mm per second,…y vertical and horizontal print error rate is low", "2.At least 60 million lines without failure", "3.Standard high performance automatic cutting head"],
             moreUrl: 'pdf/TSP654II中文.pdf'
           },
           {
             title: 'TSP 100III',
-            desTitle: '有线+无线热敏票据打印机',
-            desLists: ["1.打印速度达每秒125mm – 250mm(依据型号) ", "2.提供 USB，以太网，无线 Wi-Fi，蓝牙连接版本 ", "3.自动裁切(高品质裁切头)"],
+            desTitle: 'Wired and Wireless Thermal Bill Printers',
+            desLists: ["Print speeds up to 125mm – 250mm per second (Depending on model)", "USB, Ethernet, Wireless Wi-Fi, Bluetooth connectivity available ", "Automatic cutting (High quality cutting head)"],
             moreUrl: 'pdf/TSP100III英文.pdf'
           },
           {
             title: 'M30',
-            desTitle: '智能连接热敏票据打印机',
-            desLists: ["1.操作便捷，时尚精巧，简约小巧，随心所置", "2.可视化 LED 显示灯，电源、报错、缺纸实时提示，打印机状态一目了然 ", "3.内置 USB，以太网口以及无线模块"],
+            desTitle: 'Smart Connect Thermal Bill Printer',
+            desLists: ["1.Easy to operate, Stylish, Compact", "2.Real-time prompt visual LED indicator, power su…, paper out reminder, printer status at a glance ", "3.Built-in USB, Ethernet port and wireless module"],
             moreUrl: 'pdf/TM-m30彩页.pdf'
           },
           {
             title: 'SM-L200',
-            desTitle: '精细型58毫米低功耗蓝牙便携打印机',
-            desLists: ["1.专为移动 POS 市场设计，使用简单，无需传统匹配对接 ", "2.适用于需共享 Wi-Fi 打印机的场景 ", "3.“放入-打印”式的便捷打印纸装载模式和长达13小时的持久续航"],
+            desTitle: 'Convenient 58mm Low Energy Bluetooth Portable Printer',
+            desLists: ["1.Designed for the mobile POS market, it is simple…does not require traditional matching and docking", " 2.Applicable to scenes that need to share a Wi-Fi printer ", "3.Put-in type convenient paper loading mode and up to 13 hours of lasting battery life"],
             moreUrl: 'pdf/英文%20STAR%20SM%20-%20L200.pdf'
           }
         ]
@@ -45,10 +45,10 @@
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang='stylus'>
+<style lang='stylus' scoped>
   @import '../../../static/css/mixin.styl'
   
-  .hardware_box
+  .hardware_box /deep/
     &>div:nth-child(2n)
       background: #F9F9F9
     &>div:nth-child(1)

@@ -6,7 +6,9 @@
 
       <span class="menu" @click='showMenu'></span>
     </div>
-    <div v-if='isShowMenu' class="menu_box">
+    <div class="gradual_shadow" :class='{active: isShowShadow}'></div>
+    <div :class='{active: isShowMenu}' class="menu_box">
+      <div @click='closeMenu' class="left_shade"></div>
       <div class="menu_content">
         <div class="menu_item">
           <p class='item_title close_item'>
@@ -156,7 +158,8 @@
         isShow_1: false,
         isShow_2: false,
         isShow_3: false,
-        isShowMenu: false
+        isShowMenu: false,
+        isShowShadow: false
       }
     },
     computed: {
@@ -176,10 +179,12 @@
       },
       showMenu() {
         this.isShowMenu = true
+        this.isShowShadow = true
         this.$emit('noRoll')
       },
       closeMenu() {
         this.isShowMenu = false
+        this.isShowShadow = false
         this.$emit('canRoll')
       }
     },
@@ -221,15 +226,34 @@
         width: 0.426667rem
         height: 0.373333rem
         bg_dpr('~images/icon_navigation_more')
+    .gradual_shadow
+      position: absolute
+      top: 0
+      left: 0
+      width: 100vw
+      height: 100vh
+      background: rgba(0,0,0,0)
+      z-index: 1
+      transition: all 0.5s ease
+      &.active
+        background: rgba(0,0,0,0.2)
     .menu_box
-      &::before
-        content: ''
+      transform: translateX(100%)
+      transition: all 0.5s ease
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 4
+      &.active
+        transform: translateX(0)
+      .left_shade
         position: absolute
         top: 0
         left: 0
-        width: 100vw
+        width: 2.133333rem
         height: 100vh
-        background: rgba(0,0,0,0.20)
       .menu_content 
         width: 7.866667rem
         height: 100vh
@@ -240,7 +264,6 @@
         background: #fff
         box-sizing: border-box
         padding: 0.853333rem
-        z-index: 3
         .menu_item
           font-size: 0.426667rem
           line-height: 0.586667rem

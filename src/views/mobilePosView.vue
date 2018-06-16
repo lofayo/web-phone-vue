@@ -51,10 +51,11 @@
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang='stylus'>
+<style lang='stylus' scoped>
   @import '../../static/css/mixin.styl'
+  // @import '../../static/css/hardwareComponent.styl'
   
-  .hardware_box
+  .hardware_box /deep/
     &>div:nth-child(2n)
       background: #F9F9F9
     &>div:nth-child(1)
@@ -83,5 +84,4 @@
         bg_dpr_contain('~images/img_MobilePOS_e55u')
       .logo_img
         bg_dpr('~images/img_MobilePOS_verufone')
-
 </style>

@@ -13,32 +13,32 @@
         hardwareData: [
           {
             title: 'iSMP3',
-            desTitle: '将 iPhone 6 无缝转换成安全的MPOS',
-            desLists: ["1.功能强大的便携式终端，全面支持各种支付方式", "2.应用最新科技，正是您所寻找的安全高效的移动支付设备", "3.持久的电池寿命和坚固的设计，它适用于要求最苛刻的零售环境"],
-            moreUrl: 'pdf/ismp3%20中文.pdf'
+            desTitle: 'Convert iPhone 6 seamlessly to secure MPOS',
+            desLists: ["1.Powerful portable terminal fully supports various payment methods", "2.Applying the new technology, for a safe and efficient mobile payment device", "3.Long-lasting battery life and rugged design for the most demanding retail environment"],
+            moreUrl: 'pdf2/ismp3%20中文.pdf'
           },
           {
             title: 'ASR-020D',
-            desTitle: 'Muti-type 外套式条码读取器',
-            desLists: ["1.采用主体扫描设备与外壳分离式设计", "2.适配 iPhone 6、iPhone 6 Plus、iPod touch 等各种型号", "3.可读取各种类的一维条形码、二维条形码以及各国邮政编码"],
+            desTitle: 'Muti-Type Shell Barcode Reader',
+            desLists: ["1.Separated design using the main scanning device and shell", "2.Adapts to iPhone 6, iPhone 6 Plus, iPod touch and other models", "3.Read all kinds of One-Dimensional barcodes, Two-Dimensional barcodes, and postal codes"],
             moreUrl: 'pdf/ASR-020D.pdf'
           },
           {
             title: 'Captuvo SL42',
-            desTitle: '企业级 iPhone 6 和 6 Plus 专用扫描附件',
-            desLists: ["1.内置简单易用的影像扫描头，拥有强劲的一维和二维条码扫描性能", "2.保障交易安全，最大化客户使用时间和加速业务敏捷度", "3.配有 Adaptus™ 影像技术、可加密的磁条阅读器和防护外壳"],
+            desTitle: 'iPhone 6 and 6 Plus Enterprise-Class Scan Attachments',
+            desLists: ["1.Built-in image scanning head with powerful 1D and 2D barcode scanning capabilities", "2.Secure transaction security, maximize customer usage time and accelerate business sensitivity", "3.With Adaptus TM Imaging Technology, Encrypted Magnetic Stripe Reader and Protective Case"],
             moreUrl: 'pdf/产品彩页-Honeywell.pdf'
           },
           {
             title: 'e355M',
-            desTitle: '一体化移动智能迷你 POS',
-            desLists: ["1.与 iPod Touch、iPhone 5s、iPhone SE 等智能手机完美搭配 ", "2.灵活的移动支付模块，稳定和安全的支付平台 ", "3.丰富的通信选择，支持所有主要支付手段"],
+            desTitle: 'Integrated Mobile Smart Mini POS',
+            desLists: ["1.Adapted to smart phones such as iPod Touch, iPhone 5s, iPhone SE", "2.Flexible mobile payment module, stable and secure payment platform ", "3.Diverse communication options, supporting all major payment methods"],
             moreUrl: 'pdf/e355M_CN.pdf'
           },
           {
             title: 'e355U',
-            desTitle: '灵活整合，无限可能',
-            desLists: ["1.具备绝对通用性，既可独立模式运行，也可搭配智能设备 ", "2.支持所有主要支付手段（NFC、EMV、磁条卡、扫码、Apple Pay） ", "3.符合人体工学的设计便于单手操作"],
+            desTitle: 'Flexible integration, unlimited possibilities',
+            desLists: ["1.Absolute versatility, running in stand-alone mode, or with smart devices ", "2.Supports all major payment methods (NFC, EMV, magnetic stripe card, scan code, Apple Pay)", "3.Ergonomic design for easy one-handed operation"],
             moreUrl: 'pdf/英文%20e355（U）.pdf'
           }
         ]
@@ -51,10 +51,10 @@
 
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang='stylus'>
+<style lang='stylus' scoped>
   @import '../../../static/css/mixin.styl'
   
-  .hardware_box
+  .hardware_box /deep/
     &>div:nth-child(2n)
       background: #F9F9F9
     &>div:nth-child(1)

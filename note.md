@@ -42,7 +42,10 @@
 			  @media (-webkit-min-device-pixel-ratio: 3) {
 				background-image:url('~images/img_bottom_facebook@3x.png');
 			  }
-			  
+	
+		麻麻地，再来回顾这个坑，scoped真的是个大坑。
+		长见识了。css也有作用域了，见多才能识广
+		https://vue-loader.vuejs.org/zh/guide/scoped-css.html#混用本地和全局样式
 			  
 			  
 3、config/index.js
