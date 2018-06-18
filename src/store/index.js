@@ -10,7 +10,7 @@ export default new Vuex.Store({
   },
   mutations: {
     switchBtn (state) {
-      state.isEn = !state.isEn
+      this.state.isEn = !this.state.isEn
     }
   }
 })

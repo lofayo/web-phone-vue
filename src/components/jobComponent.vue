@@ -27,7 +27,7 @@
           </ul>
         </div>
       </div>
-      <div class="apply_job more">投递简历</div>
+      <a href="mailto:nina@pospi.com" ><div class="apply_job more">投递简历</div></a>
     </div>
   </li>
 </template>
