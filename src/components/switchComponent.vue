@@ -31,7 +31,7 @@
     justify-content: space-between
     align-items: center
     transition: all .5s
-    .circle 
+    &>.circle 
       display: inline-block
       width: 0.48rem
       height: 0.48rem
@@ -46,6 +46,6 @@
     background: #fff
     border: 0.026667rem solid #eee
   .active
-    .circle
+    &>.circle
       transform: translate(0.48rem,0)
 </style>
