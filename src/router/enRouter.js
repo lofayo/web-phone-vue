@@ -21,7 +21,6 @@ import serviceEnView from '@/views/english/serviceView'
 import payEnView from '@/views/english/payView'
 import solutionEnView from '@/views/english/solutionView'
 import allInOneEnView from '@/views/english/allInOneView'
-import previewPdfEnView from '@/views/english/previewPdfView'
 
 
 
@@ -94,7 +93,4 @@ export default [{
   }, {
     path: '/allInOneEn',
     component: allInOneEnView
-  }, {
-    path: '/previewPdf/:iEnd(.+)',
-    component: previewPdfEnView
   }]

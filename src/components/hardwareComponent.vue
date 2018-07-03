@@ -9,9 +9,9 @@
     <ul class="des_lists">
       <li v-for='(list,index) of hardware.desLists' :key='index'>{{list}}</li>
     </ul>
-    <a v-if='isEn' target="_blank" :href="hardware.moreUrl"><p class="more test_more">Learn More</p></a>
-    <a v-else target="_blank" :href="hardware.moreUrl"><p class="more test_more">了解更多</p></a>
-    <!-- <router-link :to='/previewPdf/+hardware.moreUrl'><p class="more test_more">了解更多</p></router-link> -->
+<!--     <a v-if='isEn' :href="hardware.moreUrl"><p class="more test_more">Learn More</p></a>
+    <a v-else :href="hardware.moreUrl"><p class="more test_more">了解更多</p></a> -->
+    <router-link :to='/previewPdf/+hardware.moreUrl'><p class="more test_more">{{ isEn === true ? 'Learn More' : '了解更多'}}</p></router-link>
   </div>
 </template>
 <script>

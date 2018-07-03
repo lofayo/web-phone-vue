@@ -60,36 +60,36 @@
             <span v-else class="down_arrow"></span>
           </p>
           <ul v-if='isShow_2' class="item_list hardware">
-            <router-link v-if='isEn' @click.native='closeMenu' to='mobilePosEn'><li>Smart Mobile POS</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='mobilePos'><li>手持移动智能 POS</li></router-link>
+            <router-link v-if='isEn' @click.native='closeMenu' to='/mobilePosEn'><li>Smart Mobile POS</li></router-link>
+            <router-link v-else @click.native='closeMenu' to='/mobilePos'><li>手持移动智能 POS</li></router-link>
 
-            <router-link v-if='isEn' @click.native='closeMenu' to='deskCheckEn'><li>Desktop Cash Machine</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='deskCheck'><li>台式收银一体机</li></router-link>
+            <router-link v-if='isEn' @click.native='closeMenu' to='/deskCheckEn'><li>Desktop Cash Machine</li></router-link>
+            <router-link v-else @click.native='closeMenu' to='/deskCheck'><li>台式收银一体机</li></router-link>
 
-            <router-link v-if='isEn' @click.native='closeMenu' to='printerEn'><li>Receipt Printer</li></router-link>
-            <router-link v-else @click.native='closeMenu' to='printer'><li>票据打印机</li></router-link>
+            <router-link v-if='isEn' @click.native='closeMenu' to='/printerEn'><li>Receipt Printer</li></router-link>
+            <router-link v-else @click.native='closeMenu' to='/printer'><li>票据打印机</li></router-link>
 
           </ul>
         </div>
         <div class="menu_item">
-          <router-link v-if='isEn' @click.native='closeMenu' to='customerEn'>
+          <router-link v-if='isEn' @click.native='closeMenu' to='/customerEn'>
             <p class='item_title'>
               <span>CUSTOMERS</span>
             </p>
           </router-link>
-          <router-link v-else @click.native='closeMenu' to='customer'>
+          <router-link v-else @click.native='closeMenu' to='/customer'>
             <p class='item_title'>
               <span>典型客户</span>
             </p>
         </router-link>
         </div>
         <div class="menu_item">
-          <router-link v-if='isEn' @click.native='closeMenu' to='resourceEn'>
+          <router-link v-if='isEn' @click.native='closeMenu' to='/resourceEn'>
             <p class='item_title'>
               <span>RESOURCES</span>
             </p>
           </router-link>
-          <router-link v-else @click.native='closeMenu' to='resource'>
+          <router-link v-else @click.native='closeMenu' to='/resource'>
             <p class='item_title'>
             <span>资源</span>
           </p>
@@ -123,7 +123,7 @@
             <span style="display: flex;">
               <span v-if='isEn'>EN</span>
               <span v-else>简</span>
-              <router-link v-if='isEn' to='home' >
+              <router-link v-if='isEn' to='/home' >
                 <switchComponent style='margin-left: 0.266667rem' />
               </router-link>
               <router-link v-else to='/homeEn' >
@@ -133,12 +133,12 @@
           </p>
         </div>
         <div class="menu_item">
-          <router-link v-if='isEn' @click.native='closeMenu' to='contactUsEn'>
+          <router-link v-if='isEn' @click.native='closeMenu' to='/contactUsEn'>
             <p class='contact_us'>
               CONTACT US
             </p>
           </router-link>
-          <router-link v-else @click.native='closeMenu' to='contactUs'>
+          <router-link v-else @click.native='closeMenu' to='/contactUs'>
             <p class='contact_us'>
               联系我们
             </p>

@@ -207,3 +207,26 @@
 			所以多看看文件，多理解理解，别在那钻死胡同，找不到解决办法就看官方文档，别在那浪费时间，学会快速查文档解决问题也是中能力
 	
 	（4）利用css的transition以及tranform可以写出一些好玩的页面样式，以及更好的用户体验
+	
+14、vue项目动态属性的绑定语法
+
+	<router-link :to="'/detail/'+index1+'/'+index2">
+	
+	<a :name="'#'+index">{{good.name}}</a>
+	
+	
+15、给事件处理程序传递除了事件对象之外的参数？
+
+	<span onclick='click(event,10)'></span>
+	
+	如何实现这种传递多个参数情形？
+
+16、vuex中mutation传值的问题
+
+	//传入一个对象
+	this.$store.commit('addGoodsToCar',{price,name})
+	
+	//直接传入多个变量
+	this.$store.commit('addGoodsToCar',price,name)
+
+	这两种区别在于store.js中的mutation接收值的问题，如果直接传入多个变量，会出现mutation中根本接收不到值

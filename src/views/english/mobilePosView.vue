@@ -15,7 +15,7 @@
             title: 'iSMP3',
             desTitle: 'Convert iPhone 6 seamlessly to secure MPOS',
             desLists: ["1.Powerful portable terminal fully supports various payment methods", "2.Applying the new technology, for a safe and efficient mobile payment device", "3.Long-lasting battery life and rugged design for the most demanding retail environment"],
-            moreUrl: '../pdf2/ismp3%20中文.pdf'
+            moreUrl: '../pdf/ismp3%20中文.pdf'
           },
           {
             title: 'ASR-020D',
